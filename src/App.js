@@ -6,6 +6,7 @@ import BookmarkList from './BookmarkList/BookmarkList';
 import BookmarksContext from './BookmarksContext';
 import Nav from './Nav/Nav';
 import config from './config';
+import Rating from './Rating/Rating'
 import './App.css';
 
 class App extends Component {
@@ -75,6 +76,10 @@ class App extends Component {
     return (
       <main className='App'>
         <h1>Bookmarks!</h1>
+      <Rating value={5} />
+      <Rating />
+      <BookmarkList value={[1,2,3,4,5]}/>
+      <BookmarkList bookmarks={[{a:2, b:4}, {a:9, b:12}]}/>
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
           <div className='content' aria-live='polite'>

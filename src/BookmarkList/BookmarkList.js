@@ -4,7 +4,7 @@ import BookmarksContext from '../BookmarksContext';
 import BookmarkItem from '../BookmarkItem/BookmarkItem';
 import './BookmarkList.css'
 
-class BookmarkList extends Component {
+export default class BookmarkList extends Component {
   static proptTypes = {
     bookmarks: PropTypes.arrayOf(
       PropTypes.shape({
@@ -40,4 +40,8 @@ class BookmarkList extends Component {
   }
 }
 
-export default BookmarkList;
+BookmarkList.propTypes = {
+  bookmarks: PropTypes.array
+};
+
+
